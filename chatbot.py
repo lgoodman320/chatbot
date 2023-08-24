@@ -10,11 +10,11 @@ while True:
     try:
         user_input = input("You: ")
         res = openai.ChatCompletion.create(
-            model = 'gpt-3.5-turbo',
+            model = 'gpt-4',
             messages = [{"role": "user", "content": user_input}]
         )
         print(res['choices'][0]['message'])
-        
+
     except KeyboardInterrupt:
         print('Exiting...')
         break
